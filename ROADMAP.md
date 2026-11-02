@@ -66,6 +66,10 @@ The first three feature milestones (**0.1.0**, **0.2.0**, **0.3.0**) have been r
 
 **Exit criteria / dependency gate:** All planned Calendar feature milestones **0.4.0–0.10.0** are completed (or explicitly revised in Calendar's own roadmap), release candidates are validated, and **Calendar 1.0.0 is published**. People should be able to install, use, update and recover Calendar confidently. The date will be determined by progress and quality, not a deadline. Major implementation work on subsequent ecosystem phases starts **only after this gate**.
 
+### Calendar encryption and secure storage requirements
+
+Before declaring encryption support, complete the [security architecture checklist](SECURITY_PRINCIPLES.md): model threats, prototype SQLCipher and OS-backed key storage, inventory attachments/backups/indexes, test migration from plaintext SQLite, and validate reminder and Plasma widget behavior. Research begins during Calendar betas; implementation and its exact release milestone depend on testing and feasibility. Encryption is **not available in the current beta**. The Calendar 1.0 quality gate should explicitly resolve this security scope before release.
+
 ## Phase 2 — Liquid UI Kit
 
 **Status:** Planned — starts after Calendar 1.0.0
