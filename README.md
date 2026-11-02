@@ -27,6 +27,10 @@ Two proposed shared foundations would support the apps:
 - **Liquid UI Kit:** A reusable PySide6/QML design system for consistent navigation, themes, interactions, and accessibility.
 - **Liquid Connect:** Optional local inter-app communication for linking emails, notes, events, and tasks without a Liquid-operated cloud service.
 
+## Local-first and security commitment
+
+**Your data. Your device. Your control.** Liquid is being designed around local-first data ownership, privacy by default, and secure-by-design engineering. The target is **encrypted local databases and sensitive backups**, with convenient OS-backed unlocking where available and an optional stronger app lock. These encryption features are **planned, not yet implemented in the Calendar beta**. Read [Security Principles](SECURITY_PRINCIPLES.md) for the proposed threat model, safe migration requirements, and honest limits.
+
 ## Guiding principles
 
 - **Local-first:** Application data is stored locally by default; users remain in control.
