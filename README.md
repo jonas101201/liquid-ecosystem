@@ -2,9 +2,15 @@
 
 **A local-first, open-source family of desktop productivity applications.**
 
-> **Project status: Early planning (November 2026).** Liquid Calendar is available as a public beta. Liquid Notes, Liquid Mail, Liquid Connect, and Liquid UI Kit are proposals, not released products. This repository documents the ecosystem vision; it does not contain the application source code.
+> **Project status: Early planning (November 2026).** Liquid Calendar is available as a public beta. **Finishing the existing Liquid Calendar roadmap through its stable 1.0.0 release is the first priority.** Liquid Notes, Liquid Mail, Liquid Connect, and Liquid UI Kit are future proposals; substantial development of those projects is planned only after Calendar 1.0.0. This repository documents the ecosystem vision; it does not contain the application source code.
 
 **[Explore the tentative development roadmap](ROADMAP.md)** · **[Liquid Calendar](https://github.com/jonas101201/liquid-calendar)**
+
+## Development order
+
+**Calendar first.** The [Liquid Calendar roadmap](https://github.com/jonas101201/liquid-calendar/blob/main/ROADMAP.md) plans feature milestones **0.4.0–0.10.0**, followed by release candidates and **1.0.0 stable**. This roadmap takes precedence over ecosystem planning. Only after Calendar reaches 1.0.0 will substantial development of the shared UI Kit, Liquid Notes and other Liquid applications begin. There is **no committed completion date** for Calendar or subsequent applications.
+
+See the [ecosystem roadmap](ROADMAP.md) for the dependent phases and tentative feature scope.
 
 ## The vision
 
