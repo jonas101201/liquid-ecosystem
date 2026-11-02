@@ -21,13 +21,13 @@
 
 | Planning window | Focus | Confidence |
 | --- | --- | --- |
-| **Q4 2026 – Q1 2027** | Stabilize Liquid Calendar, address critical bugs, test recovery and improve release/install experience | Near-term focus, not a 1.0 deadline |
-| **Q1 – Q2 2027** | Extract shared UI patterns and prototype Liquid UI Kit | Tentative |
-| **Q2 – Q4 2027** | Explore and build the first Liquid Notes versions; seek external testers | Aspirational |
-| **Q4 2027 – Q2 2028** | Prototype optional Calendar ↔ Notes integration and evaluate Windows builds | Aspirational |
-| **2028+** | Improve ecosystem cohesion; research Liquid Mail architecture and viability | Exploratory, no release date |
+| **First: until Calendar 1.0.0** | Complete the remaining Liquid Calendar beta milestones **0.4.0–0.10.0**, then release candidates and a stable **1.0.0** | **Required before starting other major Liquid apps; no fixed end date** |
+| **After Calendar 1.0.0** | Extract shared UI patterns and develop Liquid UI Kit | Tentative, dependent on Calendar completion |
+| **Next** | Begin Liquid Notes architecture, implementation and public testing | Tentative, dependent on Calendar completion |
+| **After Notes is usable** | Prototype optional Calendar ↔ Notes integration through Liquid Connect | Tentative |
+| **Later** | Evaluate Windows support, followed by Liquid Mail feasibility research | Exploratory, no fixed dates |
 
-These windows will be revised based on feedback, available development time, stability and technical feasibility. They **do not supersede** the [separate Liquid Calendar roadmap](https://github.com/jonas101201/liquid-calendar/blob/main/ROADMAP.md), which includes its existing 0.4–0.10 beta milestones.
+**Sequencing rule:** The [Liquid Calendar roadmap](https://github.com/jonas101201/liquid-calendar/blob/main/ROADMAP.md) takes precedence. Calendar must complete its remaining planned beta milestones, pass through its release-candidate stage and reach a stable **1.0.0** before substantial development of Liquid UI Kit, Liquid Notes, Liquid Connect, or Liquid Mail begins. Future ecosystem phases are ordered dependencies, **not calendar-date commitments**. Calendar maintenance will continue after 1.0.
 
 ---
 
@@ -35,7 +35,25 @@ These windows will be revised based on feedback, available development time, sta
 
 **Status:** In progress
 
-The existing Calendar beta is the starting point. Prioritize reliability and real-world use before launching another major app.
+The current public Calendar release is **0.3.9.4**, which belongs to the completed third feature milestone. The **next planned feature milestone is 0.4.0**, not 1.0. Completing the existing [Calendar roadmap](https://github.com/jonas101201/liquid-calendar/blob/main/ROADMAP.md) is the mandatory first phase. Calendar's own roadmap is the authoritative source for milestone details and status.
+
+### Remaining Calendar feature milestones
+
+| Milestone | Planned scope | Status |
+| --- | --- | --- |
+| **0.4.0** | Flexible daily planning: custom working hours, breaks, split tasks | Planned |
+| **0.5.0** | Multiple calendars: personal, work and custom calendars | Planned |
+| **0.6.0** | ICS import: preview and duplicate detection | Planned |
+| **0.7.0** | Reminders: snooze and multiple reminders per event | Planned |
+| **0.8.0** | CalDAV synchronization and conflict handling | Planned |
+| **0.9.0** | Accessibility improvements and translation infrastructure | Planned |
+| **0.10.0** | Update flow, backup restoration, performance and broader testing | Planned |
+| **1.0.0 release candidates** | Final validation and fixes | After beta milestones |
+| **1.0.0 stable** | First stable Calendar release when quality criteria are met | **Gate for other major Liquid apps** |
+
+The first three feature milestones (**0.1.0**, **0.2.0**, **0.3.0**) have been released. Patch versions in the current 0.3.x series do not represent completion of 0.4.0 or subsequent milestones. Each remaining milestone may need additional bug-fix releases, and **none has a guaranteed delivery date**.
+
+### Completion and quality checklist
 
 - [ ] Resolve confirmed high-impact reminder/notification defects.
 - [ ] Audit critical data paths, conflict handling and database recovery.
@@ -46,11 +64,11 @@ The existing Calendar beta is the starting point. Prioritize reliability and rea
 - [ ] Recruit external testers and prioritize their reproducible feedback.
 - [ ] Define quality-based criteria for a future stable release.
 
-**Exit criteria:** People can install, use, update and recover Calendar confidently. A stable version number will only follow adequate validation—not an arbitrary date.
+**Exit criteria / dependency gate:** All planned Calendar feature milestones **0.4.0–0.10.0** are completed (or explicitly revised in Calendar's own roadmap), release candidates are validated, and **Calendar 1.0.0 is published**. People should be able to install, use, update and recover Calendar confidently. The date will be determined by progress and quality, not a deadline. Major implementation work on subsequent ecosystem phases starts **only after this gate**.
 
 ## Phase 2 — Liquid UI Kit
 
-**Status:** Planned
+**Status:** Planned — starts after Calendar 1.0.0
 
 Create a reusable design language rather than copying entire Calendar UI files into each new application.
 
@@ -65,7 +83,7 @@ Create a reusable design language rather than copying entire Calendar UI files i
 
 ## Phase 3 — Liquid Notes
 
-**Status:** Planned concept; implementation not started
+**Status:** Planned concept; implementation not started — starts after Calendar 1.0.0 and initial UI Kit groundwork
 
 A **feature-rich** desktop notes and knowledge-management application, not merely a basic text editor.
 
@@ -91,7 +109,7 @@ A **feature-rich** desktop notes and knowledge-management application, not merel
 
 ## Phase 4 — Liquid Connect
 
-**Status:** Planned concept; implementation not started
+**Status:** Planned concept; implementation not started — begins after Calendar 1.0.0 and a usable Notes foundation
 
 An optional, local integration SDK/protocol—not a mandatory all-in-one process or cloud backend.
 
@@ -116,7 +134,7 @@ An optional, local integration SDK/protocol—not a mandatory all-in-one process
 
 ## Phase 5 — Windows feasibility and releases
 
-**Status:** Under consideration; no platform release promised
+**Status:** Under consideration, after the Calendar-first milestone; no platform release promised
 
 - [ ] Separate operating-system integrations from reusable Python/application logic.
 - [ ] Prototype Notes packaging, installation, notifications and credential storage as relevant.
@@ -129,7 +147,7 @@ The Plasma widget remains a Linux/KDE-specific feature. macOS support is **not p
 
 ## Phase 6 — Liquid Mail research
 
-**Status:** Long-term exploration only; development not started
+**Status:** Long-term exploration only; development not started — not before Calendar 1.0.0
 
 A full mail client is much more demanding than a simple local utility. Research and security validation come before committing to a product.
 
@@ -166,7 +184,7 @@ A full mail client is much more demanding than a simple local utility. Research 
 
 ## What this roadmap does not promise
 
-- Specific release dates for Notes, Mail or the ecosystem as a whole.
+- A fixed date for Calendar 1.0.0, Notes, Mail or the ecosystem as a whole.
 - A fully synchronized cloud service or mandatory account infrastructure.
 - macOS support.
 - Immediate support for every Linux distribution.
